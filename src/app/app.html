@@ -1,0 +1,71 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content >
+
+    <ion-list no-lines >
+        <ion-list-header  color="menu" style="font-size:1em; height: 8px;">
+        Apps
+        </ion-list-header>
+        
+          <button menuClose ion-item *ngFor="let menuItem of appMenuItems" (click)="openPage(menuItem)">
+              <ion-icon item-left [name]="menuItem.icon" color='icon'></ion-icon>
+              {{menuItem.title}}
+          </button>
+    </ion-list>
+
+    <ion-list no-lines *ngIf="hideForm" >
+      <ion-list-header  color="menu" style="font-size:1em; height: 8px;">
+      Apps
+      </ion-list-header>
+      
+        <button menuClose ion-item *ngFor="let menuItem of appMenuItems1" (click)="openPage(menuItem)">
+            <ion-icon item-left [name]="menuItem.icon" color='icon'></ion-icon>
+            {{menuItem.title}}
+        </button>
+  </ion-list>
+
+
+    <ion-list no-lines>
+        <ion-list-header  color="menu" style="font-size:1em; height: 8px;">
+            Help
+          </ion-list-header>
+
+          <button menuClose ion-item *ngFor="let menuItem of helpMenuItems" (click)="openPage(menuItem)">
+              <ion-icon item-left [name]="menuItem.icon" color='icon'></ion-icon>
+              {{menuItem.title}}
+            </button>
+    </ion-list>
+
+    <ion-list no-lines>
+        <ion-list-header  color="menu" style="font-size:1em; height: 8px;">
+            Account
+          </ion-list-header>
+      
+          <button menuClose ion-item *ngFor="let menuItem of accountMenuItems" (click)="openPage(menuItem)">
+              <ion-icon item-left [name]="menuItem.icon" color='icon'></ion-icon>
+              {{menuItem.title}}
+            </button>
+    </ion-list>
+
+    <!-- <ion-list no-lines>
+      <ion-list-header  color="menu" style="font-size:1em; height: 8px;">
+          Account
+        </ion-list-header>
+    
+        <button menuClose ion-item *ngFor="let menuItem of lockMenuItems" (click)="openPage(menuItem)">
+            <ion-icon item-left [name]="menuItem.icon" color='icon'></ion-icon>
+            {{menuItem.title}}
+          </button> -->
+  <!-- </ion-list> -->
+
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

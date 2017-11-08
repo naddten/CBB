@@ -1,0 +1,68 @@
+<ion-header>
+
+ 
+
+  <ion-navbar>
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<ion-card color='menu'>
+<ion-card-content>
+<table>
+  <tr>
+  <th width="350" height="5px" align="center" style="font-size: 20px; font-style: Arial; color: white;"> Welcome {{userDisplayName}} ! </th>
+  </tr>
+</table>
+</ion-card-content>
+</ion-card>
+
+
+<ion-card color='menu'>
+<ion-card-content>
+
+<div class="row">
+  <div class="col col-40">First Name: </div>
+  <div class="col col-60">{{userDisplayName}}</div> 
+</div>
+
+<div class="row">
+  <div class="col col-40">Last Name: </div>
+  <div class="col col-60">{{userDisplayName1}}</div> 
+</div>
+
+<div class="row">
+  <div class="col col-40">Email: </div>
+  <div class="col col-60">{{userEmail}}</div> 
+</div>
+
+<div class="row">
+  <div class="col col-40">Phone: </div>
+  <div class="col col-60">{{userPhone}}</div> 
+</div>
+
+<div class="row">
+  <div class="col col-30">Address: </div>
+  <div class="col col-70">{{userAddress}}</div> 
+</div>
+
+  </ion-card-content>
+  </ion-card>
+
+
+<div text-center style="margin-top:50px;">
+  <button ion-button round  class="primary" color="menu" style="border-radius: 1000px; height: 100px; width: 100px; box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);" (click)="logUserOut()">
+    <ion-icon name="person" color="light" style="font-size: 30px;"></ion-icon> &nbsp; LOGOUT
+  </button>            
+</div>
+
+</ion-content>

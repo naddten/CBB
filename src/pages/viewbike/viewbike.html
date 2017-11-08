@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+     <ion-title>{{ pageTitle }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding >
+
+  <div>
+  <ion-card>
+      <img src="http://ec2-13-59-123-174.us-east-2.compute.amazonaws.com/img/bike{{this.bikeID}}.png" padding />
+       <ion-card-content>
+
+        <h2 style="font-style:bold;">Bike Model</h2>
+        <p><ion-icon name="arrow-forward"></ion-icon> {{ this.bikeModel }}</p>
+        <br/>
+        <h2 style="font-style:bold;">Rate</h2>
+        <p><ion-icon name="arrow-forward"></ion-icon> ${{ this.bikeRate }} per hour</p>
+        <br/>
+        <h2 style="font-style:bold;">Bike Description</h2>
+        <p><ion-icon name="arrow-forward"></ion-icon> {{ this.Description }}</p>
+       </ion-card-content>
+       
+  </ion-card> 
+  <div text-center>
+      <button ion-button round  color="bluenav" style="border-radius: 1000px; height: 80px; width: 80px; box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);" (click)="goPayment({record: this.bikeRate})" >Rent</button>
+  </div>
+  
+  </div>
+
+
+</ion-content>

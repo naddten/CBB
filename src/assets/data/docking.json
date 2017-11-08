@@ -1,0 +1,63 @@
+{
+    "dockings": [
+        {
+          "id": "Eye center",
+          "name": "Taman Haji Sir Muda Omar Ali Saifuddien",
+          "address": "Jln Elizabeth Dua, Bandar Seri Begawan BS8611, Brunei",
+          "state" : "Bandar Seri Begawan",
+          "latitude": 4.89285,
+          "longitude": 114.941475
+        },
+        {
+          "id": "Docking 1",
+          "name": "Masjid Omar Ali Saifuddien",
+          "address": "Jalan Masjid Omar 'Ali Saifuddien, Bandar Seri Begawan BS8711, Brunei",
+          "state": "Bandar Seri Begawan",
+          "latitude": 4.889472,
+          "longitude": 114.939287
+        },
+        { 
+          "id": "Docking 2",
+          "name": "Mercu Dirgahayu 60",
+          "address": "Jalan McArthur, Bandar Seri Begawan BS8111, Brunei",
+          "state": "Bandar Seri Begawan",
+          "latitude":  4.88673,
+          "longitude": 114.942183
+        },
+        { 
+          "id": "Docking 3",
+          "name": "Radisson Hotel",
+          "address": "Jln Tasek, Bandar Seri Begawan, Brunei",
+          "state": "Bandar Seri Begawan",
+          "latitude": 4.8947,
+          "longitude": 114.942505
+  
+        },
+        {
+          "id": "Docking 4",
+          "name": "Tamu Kianggeh",
+          "address": "Jalan Kianggeh, Bandar Seri Begawan BS8111, Brunei",
+          "state": "Bandar Seri Begawan",
+          "latitude":  4.890445,
+          "longitude": 114.945016
+        },
+        {
+          "id": "Docking 5",
+          "name": "Q-lap Mall",
+          "address": "Jalan Komersial Kiulap, Bandar Seri Begawan, Brunei",
+          "state": "Kiulap",
+          "latitude": 4.904021,
+          "longitude": 114.926358
+  
+        },
+        {
+          "id": "Docking 6",
+          "name": "The Mall",
+          "address": "The Mall, Bandar Seri Begawan, Brunei",
+          "state": "Gadong",
+          "latitude": 4.90602,
+          "longitude": 114.916456
+  
+        }
+        ]
+  }

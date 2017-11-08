@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+      </button>
+     <ion-title>Docking Station</ion-title>
+     <ion-buttons end>
+      <button ion-button (click)="maps()">
+      <ion-icon name="map" style="font-size: 30px;"></ion-icon>
+      </button>            
+  </ion-buttons>
+  </ion-navbar>
+  
+</ion-header>
+
+<ion-content padding>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+
+<button ion-item *ngFor="let item of items" (click)="openNavDetailsPage(item)" icon-start>
+      <ion-icon ios="ios-pin" md="md-pin" color="danger"></ion-icon>
+      {{ item.name }}
+      <p>{{item.address}}</p>
+</button>  
+
+    
+</ion-content>
+    

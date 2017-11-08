@@ -1,0 +1,48 @@
+<ion-header>
+
+  <ion-navbar >
+    <ion-title text-center>Sign In</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="background">
+    <div text-center style="margin-top:30px;">
+        <img src="http://ec2-13-59-123-174.us-east-2.compute.amazonaws.com/img/logo.png" style="border-radius:10px; border: 3px solid ffffff; width: 100px; "/>
+        </div>
+
+    <ion-card style="margin-top: 35px;">
+      <!-- <ion-card-header>
+        LOGIN
+      </ion-card-header> -->
+      
+      <ion-card-content>
+   <ion-list>        
+      <ion-item>
+        <ion-label stacked style="color:#000000; margin-left:10px; font-size: 15px;"><ion-icon name="mail" color="danger"></ion-icon> &nbsp; Email </ion-label>            
+        <ion-input type="email" [(ngModel)]="email" name="email" required="required" style="border:1px solid #ebedef; border-radius: 15px; color:#555C63;"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label stacked style="color:#000000; margin-left:10px; font-size: 15px;"><ion-icon name="lock" color="danger"></ion-icon> &nbsp;Password </ion-label>
+        <ion-input type="password" [(ngModel)]="password" name="password" required="required" style="border:1px solid #ebedef; border-radius: 15px; color:#555C63;"></ion-input>
+      </ion-item>
+
+      <div padding text-center>
+
+          <button *ngIf="email && password " ion-button color="bluebut" round full (click)="submitLogin()"><ion-icon name="log-in"></ion-icon> &nbsp; Log - in </button>
+
+        <!-- Show dead button if form is not filled -->
+          <button *ngIf="!email && !password " ion-button color="login" clear><ion-icon name="log-in" color="danger" ></ion-icon> &nbsp; LOGIN NOW </button>
+      </div>
+    
+</ion-list>
+      </ion-card-content>
+    </ion-card>
+    
+    <div padding text-center>      
+        <button ion-button color="bluenav" round full (click)="redirectToSignup()">Register</button>       
+     </div>
+  </ion-content>
+  

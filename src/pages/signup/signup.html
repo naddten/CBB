@@ -1,0 +1,79 @@
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title text-center>Sign Up</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="background"> 
+
+<div text-center style="margin-top:30px;">
+    <img src="http://ec2-13-59-123-174.us-east-2.compute.amazonaws.com/img/logo.png" style="border-radius:10px; border: 3px solid fff; width: 100px; "/>
+ </div>
+    
+            
+            <ion-card>
+              <!-- <ion-card-header>
+                REGISTER
+              </ion-card-header> -->
+              <ion-card-content>            
+            
+                <ion-list>
+        
+                  <ion-item>
+                      <ion-label stacked style="color:#000000; margin-left:10px; font-size: 15px;">First name</ion-label>
+                      <ion-input type="text" [(ngModel)]="first_name" name="first_name" placeholder="eg. Zul" style="border:1px solid #ebedef; border-radius: 15px; color:#555C63;"></ion-input>
+                    </ion-item>
+              
+                    <ion-item>
+                      <ion-label stacked style="color:#000000; margin-left:10px; font-size: 15px;">Last name</ion-label>
+                      <ion-input type="text" [(ngModel)]="last_name" name="last_name" placeholder="eg. Eswady" style="border:1px solid #ebedef; border-radius: 15px; color:#555C63;"></ion-input>
+                    </ion-item>
+                  
+                <ion-item>
+                    <ion-label stacked style="color:#000000; margin-left:10px; font-size: 15px;">Email</ion-label>
+                    <ion-input type="email" [(ngModel)]="email" name="email" placeholder="eg. zul@gmail.com" style="border:1px solid #ebedef; border-radius: 15px; color:#555C63;"></ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-label stacked style="color:#000000; margin-left:10px; font-size: 15px;">Password</ion-label>
+                    <ion-input type="password" [(ngModel)]="password" name="password" placeholder=" *******" style="border:1px solid #ebedef; border-radius: 15px; color:#555C63;"></ion-input>
+                  </ion-item>
+
+                  <ion-item >
+                      <ion-label stacked style="color:#000000; margin-left:10px; font-size: 15px;">Phone</ion-label>
+                      <ion-input type="text" [(ngModel)]="phone" name="phone" placeholder="eg. 8885555" required="required" style="border:1px solid #ebedef; border-radius: 15px; color:#555C63;"></ion-input>
+                    </ion-item>    
+
+                    <ion-item >
+                      <ion-label stacked style="color:#000000; margin-left:10px; font-size: 15px;">Address</ion-label>
+                      <ion-input type="textarea" [(ngModel)]="address" name="address" placeholder="Complete address" required="required" style="border:1px solid #ebedef; border-radius: 15px; color:#555C63;"></ion-input>
+                    </ion-item>   
+            
+                  
+            <hr/>
+        
+                 <!-- <div padding text-center>
+                    <button ion-button color="danger" round full (click)="doSignup()" >Signup</button>
+                  </div> -->
+
+          <div padding text-center>
+
+          <button *ngIf="first_name && last_name && email && phone && password && address " ion-button color="bluebut" round full (click)="doSignup()"><ion-icon name="create"></ion-icon> &nbsp; REGISTER </button>
+
+        <!-- Show dead button if form is not filled -->
+          <button *ngIf="!first_name && !last_name && !email && !phone && !password && !address " ion-button color="login" clear><ion-icon name="create" color="danger" ></ion-icon> &nbsp; REGISTER NOW </button>
+      </div>
+            
+                </ion-list>
+    
+            </ion-card-content>
+          </ion-card>
+          
+            
+            </ion-content>

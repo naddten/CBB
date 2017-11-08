@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-navbar>
+   <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>List of Bikes</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+<ion-item>
+      <button 
+         class="add"
+         ion-button 
+         item-right
+         icon-right
+         margin-bottom
+         color="primary"
+         (click)="addEntry()">
+            Add Bike
+            <ion-icon name="add"></ion-icon>
+      </button>
+</ion-item>
+
+<ion-item *ngFor="let item of items">
+    <ion-card>
+      
+		  <ion-card-header>
+			{{ item.bikeModel }} 
+		  </ion-card-header>
+		  <ion-card-content>
+			<h3>${{ item.bikeRate }}</h3>
+			<h3>{{ item.Description }}</h3>
+		  </ion-card-content>
+		  
+		  <button 
+			 ion-button 
+			 color="primary" 
+			 item-right
+			 (click)="viewEntry({ record: item })">View</button>
+	</ion-card>         
+</ion-item>
+
+</ion-content>
+
+<!-- 
+<ion-card>
+  <img src="img/nin-live.png"/>
+  <ion-card-content>
+    <ion-card-title>
+      Nine Inch Nails Live
+      </ion-card-title>
+    <p>
+      The most popular industrial group ever, and largely
+      responsible for bringing the music to a mass audience.
+    </p>
+  </ion-card-content>
+</ion-card> -->

@@ -1,0 +1,72 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Payment</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <form [formGroup]="form" >
+
+    <ion-card>
+         <ion-card-header>
+          {{ this.bikeModel }} 
+         </ion-card-header>
+
+         <ion-card-content>
+            <ion-label>Docking Station</ion-label>
+            <ion-item style="background: rgba(232, 230, 230, 0.6px); border-radius:10px;">
+                <ion-select formControlName="dockStation" [(ngModel)]="dockStation" required="required">
+                    <ion-option value="Masjid Omar Ali Saifuddien">Masjid Omar Ali Saifuddien</ion-option>
+                    <ion-option value="Mercu Dirgahayu 60">Mercu Dirgahayu 60</ion-option>
+                    <ion-option value="Radisson Hotel">Radisson Hotel</ion-option>
+                    <ion-option value="Taman Haji Sir Muda Omar Ali Saifuddien">Taman Haji Sir Muda Omar Ali Saifuddien</ion-option>
+                    <ion-option value="The Core">The Core</ion-option>
+                    <ion-option value="UBD Chancellor's Hall">UBD Chancellor's Hall</ion-option>
+                    <ion-option value="University Sport Complex">University Sport Complex</ion-option>
+                    <ion-option value="UTB Multipurpose Hall">UTB Multipurpose Hall</ion-option>                  
+                    <ion-option value="University Mosque">University Mosque</ion-option>                  
+                </ion-select>
+              </ion-item>               
+                
+          <br/>
+          <h3>Hours:</h3>
+          <ion-item style="background: rgba(232, 230, 230, 0.6px); border-radius:10px;">
+          <ion-input type="text" max="16" placeholder="eg 24"  formControlName="hours" [(ngModel)]="hours" required="required" style="border:1px solid #ffffff; border-radius: 15px; color:#555C63;"></ion-input>
+          </ion-item>
+          <br/>
+
+          <h3>Card Number:</h3>
+          <ion-item style="background: rgba(232, 230, 230, 0.6px); border-radius:10px;">
+          <ion-input type="text" max="16" placeholder="eg 123456789123456"  formControlName="cardNumber" [(ngModel)]="cardNumber" required="required" style="border:1px solid #ffffff; border-radius: 15px; color:#555C63;"></ion-input>
+          </ion-item>
+          <br/>
+
+          <h3>Expiry Date:</h3>
+          <ion-item  style="background: rgba(232, 230, 230, 0.6px); border-radius:10px;">
+          <ion-datetime displayFormat="MM/YYYY" pickerFormat="MMMM YYYY" formControlName="expiryDate" [(ngModel)]="expiryDate" ></ion-datetime>
+          <!-- <ion-input type="date" placeholder=" YYYY/MM/DD" formControlName="expiryDate" [(ngModel)]="expiryDate" required="required" style="border:1px solid #ffffff; border-radius: 15px; color:#555C63;"></ion-input>  -->
+          </ion-item>
+
+          <br/>
+          <h3>Security Code:</h3>
+          <ion-item style="background: rgba(232, 230, 230, 0.6px); border-radius:10px;">
+          <ion-input type="text" placeholder="eg 123"  formControlName="securityCode" [(ngModel)]="securityCode" required="required" style="border:1px solid #ffffff; border-radius: 15px; color:#555C63;"></ion-input>
+          </ion-item>
+          <br/>
+          <p>Total:$ {{this.bikeRate*hours}}</p>
+         </ion-card-content>
+         
+    </ion-card> 
+
+  </form>
+
+    <div text-center>
+    <button ion-button color="bluenav" style="border-radius: 1000px; height: 80px; width: 80px; box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);" [disabled]="!form.valid" (click)="saveEntry()">Pay Now</button>
+    </div>
+    
+
+</ion-content>

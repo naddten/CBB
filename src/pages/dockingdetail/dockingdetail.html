@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Docking Station</ion-title> 
+  </ion-navbar>
+</ion-header>
+
+<ion-content text-center>
+ <ion-card padding>
+     <h3>Docking Station : {{item.id}}</h3>
+     <h3>Location : {{item.name}}</h3>
+     <h3>Area: {{item.area}}</h3>
+     <h3>Address: {{item.address}}</h3>
+ </ion-card>
+
+ <ion-card style="height:70%; width:95%;">
+    <div #map id="map"></div> 
+ </ion-card>
+    
+
+</ion-content>

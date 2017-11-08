@@ -1,0 +1,58 @@
+<ion-header>
+<ion-navbar>
+            <button ion-button menuToggle *ngIf="hideForm">
+            <ion-icon name="menu"></ion-icon>
+            </button>
+            <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+            </button>
+      <ion-title>{{ pageTitle }}</ion-title>
+</ion-navbar>
+</ion-header>
+
+
+<ion-content padding >
+
+      <form [formGroup]="form" >
+                  
+            <ion-card>
+            
+                  <ion-card-content >     
+                  <ion-list>
+
+                  <ion-label stacked style="color:#000000; font-size: 15px;">Bike Model </ion-label>
+                  <ion-item style="background: rgba(232, 230, 230, 0.6px); border-radius:10px;">                                     
+                  <ion-input type="text" placeholder="Enter bike model.." formControlName="bikeModel" [(ngModel)]="bikeModel" required="required" style="border:1px solid #ffffff; border-radius: 12px; color:#555C63;"></ion-input>
+                  </ion-item>
+
+                  <ion-label stacked style="color:#000000; font-size: 15px;">Bike Rate</ion-label>   
+                  <ion-item style="background: rgba(232, 230, 230, 0.6px); border-radius:10px;">   
+                  <ion-input placeholder="10" formControlName="bikeRate" rows="6" [(ngModel)]="bikeRate" required="required" style="border:1px solid #ffffff; border-radius: 12px; color:#555C63;"></ion-input> 
+                  </ion-item>
+
+                  <ion-label stacked style="color:#000000; font-size: 15px;">Bike Description</ion-label>  
+                  <ion-item style="background: rgba(232, 230, 230, 0.6px); border-radius:10px;">   
+                  <ion-textarea placeholder="Description..." formControlName="Description" rows="6" [(ngModel)]="Description" required="required" style="border:1px solid #ffffff; border-radius: 12px; color:#555C63;"></ion-textarea>
+                  </ion-item>
+                  
+                  <button ion-button block  color="bluenav" (click)="openMenu()" >Upload Image</button>
+                  <!-- <button ion-button block  color="bluenav" (click)="takePicture()">Take a Picture</button> -->
+                  
+                  Picture:
+                  <ion-item style="background: rgba(232, 230, 230, 0.6px); border-radius:10px;"> 
+                  <img [src]="base64Image" *ngIf="base64Image" /> 
+                  </ion-item> 
+
+                  </ion-list>
+                  </ion-card-content>
+
+            </ion-card>
+      
+      <div text-center>
+      <button ion-button color="bluenav" style="border-radius: 1000px; height: 80px; width: 80px; box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);" text-center [disabled]="!form.valid" (click)="saveEntry()">Save Entry</button>
+      </div>
+
+      </form>
+
+
+</ion-content>

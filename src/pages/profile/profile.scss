@@ -1,0 +1,27 @@
+page-profile {
+
+ .background{
+        width:100%;
+        height:100%;
+        background: linear-gradient(10deg,#4E5EFC,#4EE7FC);}
+
+ ion-card{
+        margin:100px;
+    }
+
+.row{
+	font-size: 15px;
+	color: #fff;
+}
+    
+    ion-card.card{
+        //background: linear-gradient(10deg,#4E5EFC,#4EE7FC);
+        border-radius:10px;
+    }
+
+.color{
+
+background: rgba(232, 230, 230, 0.6px);
+}
+    
+}

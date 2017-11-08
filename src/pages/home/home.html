@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    
+    <ion-title>Ceria Bike Brunei</ion-title>
+
+    <ion-buttons end>
+        <button ion-button (click)="profile()">
+        <ion-icon name="person" style="font-size: 30px;"></ion-icon>
+        </button>            
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+  <ion-card color='menu'>
+    <ion-card-content>
+     <ion-slides pager>
+  
+          <ion-slide style="background-image: url('http://ec2-13-59-123-174.us-east-2.compute.amazonaws.com/img/slide1.png')">
+              
+          </ion-slide>
+  
+          <ion-slide style="background-image: url('http://ec2-13-59-123-174.us-east-2.compute.amazonaws.com/img/slide2.png')">
+            
+          </ion-slide>
+  
+          <ion-slide style="background-image: url('http://ec2-13-59-123-174.us-east-2.compute.amazonaws.com/img/slide3.png')">
+           
+          </ion-slide>
+  
+      </ion-slides>
+
+      
+      </ion-card-content>
+      </ion-card>
+
+      <!-- <div class="loader"></div>
+    
+      <div class="bottom-container">
+        <ion-item>
+          <ion-range [(ngModel)]="radius" #radiusVal min="40" max="300" color="primary" pin="true" snaps="true" step="20">
+          </ion-range>
+        </ion-item>
+        <button ion-button large outline block (click)="setGeofence(radiusVal.value)" id="cta" color="primary">Set Geofence</button>
+    
+        <p *ngIf="error">{{ error }}</p>
+    </div> -->
+  </ion-content>

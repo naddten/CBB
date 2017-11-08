@@ -1,0 +1,31 @@
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title>Lock Page</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <h2 text-center>Docking Station</h2>
+
+
+    <div text-center>
+        <button ion-button round  color="bluenav" style="border-radius: 1000px; height: 120px; width: 120px;  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);" (click)="openWithInAppBrowser('http://192.168.43.74/H')">
+        <ion-icon name="unlock" color="white"  style="font-size: 50px;" ></ion-icon> &nbsp; Unlock
+        </button>      
+  
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <button ion-button round  color="bluenav" style="border-radius: 1000px; height: 120px; width: 120px; box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);" (click)="openWithInAppBrowser1('http://192.168.43.74/L')">
+        <ion-icon name="lock" color="white" style="font-size: 50px;"></ion-icon> &nbsp; Lock
+        </button>   
+    
+  </div>
+
+</ion-content>

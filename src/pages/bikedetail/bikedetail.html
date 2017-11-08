@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+   <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Rent-A-Bike</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding >
+
+<ion-item *ngFor="let item of items" no-lines>
+    <ion-card>
+      <img src="http://ec2-13-59-123-174.us-east-2.compute.amazonaws.com/img/bike{{item.bikeID}}.png" padding/>
+		  <ion-card-header text-center>
+		  {{ item.bikeModel }} 
+		  </ion-card-header>
+		  <ion-card-content>
+			<h3 text-center>${{ item.bikeRate }} per hour</h3>
+		  </ion-card-content>
+      
+      <div text-center>
+      <button ion-button color="bluenav" style="border-radius: 1000px; height: 55px; width: 55px; box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);" (click)="viewEntry({ record: item })" >View</button>
+     </div>
+     <br/>
+	</ion-card>         
+</ion-item>
+
+</ion-content>
+
